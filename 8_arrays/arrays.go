@@ -38,4 +38,11 @@ func main () {
 
 	fmt.Println(TwoDarray)
 
+
+	// use arrays if 
+ // Fixed size, that is predictable 
+ // Memory optimization
+ // Constant time access
+
+
 }
