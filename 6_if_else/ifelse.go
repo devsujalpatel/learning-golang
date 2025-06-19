@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
 	// age := 14
 	// if age >= 18 {
@@ -16,5 +18,21 @@ func main() {
 	// } else {
 	// 	fmt.Println("You are not an adult")
 	// }
+
+	var role = "admin"
+	var hasPermission = false
+
+	if role == "admin" && hasPermission {
+		fmt.Println("You are an admin")
+	} else {
+		fmt.Println("Permission false")
+	}
+
+	if role == "admin" || hasPermission {
+		fmt.Println("You are an admin")
+	} else {
+		fmt.Println("Permission false and you are not admin")
+	}
+	
 
 }
