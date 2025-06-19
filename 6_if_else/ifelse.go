@@ -19,20 +19,31 @@ func main() {
 	// 	fmt.Println("You are not an adult")
 	// }
 
-	var role = "admin"
-	var hasPermission = false
+	// var role = "admin"
+	// var hasPermission = false
 
-	if role == "admin" && hasPermission {
-		fmt.Println("You are an admin")
+	// if role == "admin" && hasPermission {
+	// 	fmt.Println("You are an admin")
+	// } else {
+	// 	fmt.Println("Permission false")
+	// }
+
+	// if role == "admin" || hasPermission {
+	// 	fmt.Println("You are an admin")
+	// } else {
+	// 	fmt.Println("Permission false and you are not admin")
+	// }
+
+
+	// we can declare a variable inside the if statement
+	if age :=15; age >= 18 {
+		fmt.Println("You are an adult", age)
+	} else if age >= 12 {
+		fmt.Println("You are an teen", age)
 	} else {
-		fmt.Println("Permission false")
+		fmt.Println("You are not an adult", age)
 	}
 
-	if role == "admin" || hasPermission {
-		fmt.Println("You are an admin")
-	} else {
-		fmt.Println("Permission false and you are not admin")
-	}
-	
+	// Go does not have ternary operator
 
 }
