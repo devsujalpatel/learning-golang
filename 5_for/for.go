@@ -5,11 +5,11 @@ import "fmt"
 // for loop -> only construct in go for looping
 func main () {
 	// while loop
-	// i := 1
-	// for i <= 5 {
-	// 	println(i)
-	// 	i++
-	// }
+	i := 1
+	for i <= 5 {
+		println(i)
+		i++
+	}
 	// Infinite while loop
 	// for {
 	// 	i++
@@ -28,9 +28,13 @@ func main () {
 		// 	continue
 		// }
 			fmt.Println(i)
-		
 	}
 
+	// Range loop
+
+	for i := range 3 { // excludes 3 cause 0 to 3 meaning except 3
+		fmt.Println(i)
+	}
 
 
 }
