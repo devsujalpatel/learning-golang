@@ -4,13 +4,13 @@ import "fmt"
 
 // enumerated types
 
-type OrderStatus int
+type OrderStatus string
 
 const (
-	Received OrderStatus = iota
-	Confirmed
-	Prepared
-	Delivered
+	Received  OrderStatus = "received"
+	Confirmed OrderStatus = "confirmed"
+	Prepared  OrderStatus = "prepared"
+	Delivered OrderStatus = "delivered"
 )
 
 func changeOrderStatus(status OrderStatus) {
