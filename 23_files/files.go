@@ -23,26 +23,32 @@ func main() {
 
 	// Read file 
 
-	f, err := os.Open("example.txt")
-	if err != nil {
-		panic(err)
-	}
+	// f, err := os.Open("example.txt")
+	// if err != nil {
+	// 	panic(err)
+	// }
 	
-	defer f.Close()
+	// defer f.Close()
 
-	fileInfo, err := f.Stat()
-	if err != nil {
-		panic(err)
-	}
-	size := fileInfo.Size()
+	// fileInfo, err := f.Stat()
+	// if err != nil {
+	// 	panic(err)
+	// }
+	// size := fileInfo.Size()
 	
-	buf := make([]byte, size)
+	// buf := make([]byte, size)
 
-	d, err := f.Read(buf)
+	// d, err := f.Read(buf)
+	// if err != nil {
+	// 	panic(err)
+	// }
+	// fmt.Println("read", d, "bytes")
+	// fmt.Println("data", string(buf))
+
+	f, err := os.ReadFile("example.txt")
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println("read", d, "bytes")
-	fmt.Println("data", string(buf))
+	fmt.Println(string(f))
 
 }
