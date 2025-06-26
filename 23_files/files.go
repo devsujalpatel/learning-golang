@@ -21,13 +21,13 @@ func main() {
 	// fmt.Println("file permissions:", fileInfo.Mode())
 	// fmt.Println("file modified at:", fileInfo.ModTime())
 
-	// Read file 
+	// Read file
 
 	// f, err := os.Open("example.txt")
 	// if err != nil {
 	// 	panic(err)
 	// }
-	
+
 	// defer f.Close()
 
 	// fileInfo, err := f.Stat()
@@ -35,7 +35,7 @@ func main() {
 	// 	panic(err)
 	// }
 	// size := fileInfo.Size()
-	
+
 	// buf := make([]byte, size)
 
 	// d, err := f.Read(buf)
@@ -45,10 +45,29 @@ func main() {
 	// fmt.Println("read", d, "bytes")
 	// fmt.Println("data", string(buf))
 
-	f, err := os.ReadFile("example.txt")
-	if err != nil {
-		panic(err)
-	}
-	fmt.Println(string(f))
+	// f, err := os.ReadFile("example.txt") // not good for optimization
+	// if err != nil {
+	// 	panic(err)
+	// }
+	// fmt.Println(string(f))
+
+	// Read Folders
+
+	// dir, err := os.Open("../")
+
+	// if err != nil {
+	// 	panic(err)
+	// }
+
+	// defer dir.Close()
+
+	// fileInfo, err := dir.ReadDir(-1)
+	// if err != nil {
+	// 	panic(err)
+	// }
+
+	// for _, fi := range fileInfo {
+	// 	fmt.Println(fi.Name(), fi.IsDir())
+	// }
 
 }
