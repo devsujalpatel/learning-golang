@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"os"
 )
 
@@ -69,5 +68,18 @@ func main() {
 	// for _, fi := range fileInfo {
 	// 	fmt.Println(fi.Name(), fi.IsDir())
 	// }
+
+	f, err := os.Create("example2.txt")
+	if err != nil {
+		panic(err)
+	}
+	defer f.Close()
+	// f.WriteString("hello golang, from files.go ")
+	// f.WriteString("go is nice language")
+
+	bytes := []byte("Hello Golang")
+	f.Write(bytes)
+
+	
 
 }
